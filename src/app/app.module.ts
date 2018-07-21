@@ -11,11 +11,16 @@ import { VesselsMapsModule } from './panels/vessels-map/vessels-map.module';
 import { UIComponentsModule } from './core/ui-components/ui.components.module';
 import { UsersModule } from './panels/users/users.module';
 import { APP_BASE_HREF } from '@angular/common';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HeaderComponent } from './core/layouts/header/header.component';
+import { FooterComponent } from './core/layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestPanelComponent
+    TestPanelComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   entryComponents: [
     TestPanelComponent
@@ -27,7 +32,8 @@ import { APP_BASE_HREF } from '@angular/common';
     GoldenLayoutModule.forRoot(goldenLayoutConfig),
     VesselsMapsModule,
     UsersModule,
-    UIComponentsModule
+    UIComponentsModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER,

@@ -19,7 +19,7 @@ export class UsersComponent {
   }
 
   createUser = () => {
-    this.router.navigate(['/pages/ui-system-settings/create-user']);
+    this.router.navigate(['/create']);
   }
 
 }

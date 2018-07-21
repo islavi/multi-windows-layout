@@ -23,19 +23,19 @@ export const goldenLayoutConfig: GoldenLayoutConfiguration = {
             type: 'row',
             content: [{
                 type: 'component',
-                title: 'A',
+                title: 'Vessels map',
                 componentName: 'vessels-map-page',
                 componentState: { label: 'A' }
             }, {
                 type: 'column',
                 content: [{
                     type: 'component',
-                    title: 'B',
+                    title: 'Users',
                     componentName: 'users-page',
                     componentState: { label: 'B' }
                 }, {
                     type: 'component',
-                    title: 'C',
+                    title: 'Something else',
                     componentName: 'test-panel',
                     componentState: { label: 'C' }
                 }]

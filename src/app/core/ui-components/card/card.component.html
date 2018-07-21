@@ -16,19 +16,14 @@
             <img src="assets/images/nick.png" alt="" />
         </div>
         <div class="contact-card__header__name">
-            <div>
-                <h4>{{user.firstName}}</h4>
-                <br>
-                <h4>{{user.lastName}}</h4>
-                <div class="contact-card__header__tags">
-                    <span class="contact-card__header__tag-family">{{user.role}}</span>
-                </div>
-            </div>
+            {{user.firstName}} {{user.lastName}}
+        </div>
+        <div class="contact-card__header__tags">
+            <span class="contact-card__header__tag-family">{{user.role}}</span>
         </div>
     </div>
 
     <div class="contact-card__body">
-        <p>Contact Details</p>
         <div class="contact-card__details">
             <div>
                 <div class="contact-card__details__info">

@@ -23,12 +23,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/css/style.scss",
+              "src/app/scss/style.scss",
               "node_modules/golden-layout/src/css/goldenlayout-base.css",
-              "node_modules/golden-layout/src/css/goldenlayout-dark-theme.css"
+              "node_modules/golden-layout/src/css/goldenlayout-dark-theme.css",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.js"
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
