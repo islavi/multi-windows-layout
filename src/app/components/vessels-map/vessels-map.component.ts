@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { InfoWindow } from '@agm/core/services/google-maps-types';
 import { EventsService } from '../../core/data/events.service';
 import { VesselService } from '../../core/services/vessel.service';
 import { Vessel, VesselsResponse } from '../../core/models/vessel.model';
 import { Const } from '../../core/const';
-
+import { GoldenLayoutComponentState, GlOnResize, GlOnHide, GlOnShow, GlOnTab, GoldenLayoutContainer } from '../../../core';
+import * as GoldenLayout from 'golden-layout';
 @Component({
   selector: 'vessels-map',
   styleUrls: [ './vessels-map.component.scss' ],
   templateUrl: './vessels-map.component.html',
 })
-export class VesselsMapComponent {
+export class VesselsMapComponent implements GlOnResize, GlOnHide, GlOnShow, GlOnTab {
 
   zoom: number; // google maps zoom level
   mapLat: number; // latitude
@@ -21,7 +22,9 @@ export class VesselsMapComponent {
   selectedVesselId: string;
 
   constructor(private eventsService: EventsService,
-              private vesselService: VesselService ) {
+              private vesselService: VesselService,
+              @Inject(GoldenLayoutComponentState) private state: any,
+              @Inject(GoldenLayoutContainer) private container: GoldenLayout.Container) {
     this.initDefaults();
     this.initVessels();
   }
@@ -53,6 +56,31 @@ export class VesselsMapComponent {
 
   mapClicked = ($event: MouseEvent): void => {
     // console.log(`Map clicked: ${event}`)
+  }
+
+  public onInput(e: Event): void {
+
+    this.container.extendState({
+      value: (<HTMLInputElement>e.target).value
+    });
+
+    console.log('state saved.');
+  }
+
+  public glOnResize(): void {
+    console.log('Resizing!');
+  }
+
+  public glOnShow(): void {
+    console.log('Showing!');
+  }
+
+  public glOnHide(): void {
+    console.log('Hiding!');
+  }
+
+  public glOnTab(): void {
+    console.log('Tab shown!');
   }
 
 }

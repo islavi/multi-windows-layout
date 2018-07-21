@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Vessel, VesselsResponse } from '../models/vessel.model';
+import { Vessel, VesselsResponse } from '../../core/models/vessel.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BaseService } from './base.service';
-import { Const } from '../const';
 import 'rxjs/add/observable/of';
+import { BaseService } from './base.service';
+import { Const } from '../../core/const';
 
 @Injectable()
 export class VesselService extends BaseService {
@@ -29,7 +29,7 @@ export class VesselService extends BaseService {
               reject(err.error || 'Server error');
           });
 
-    })
+    });
     return promise;
   }
 
@@ -49,8 +49,7 @@ export class VesselService extends BaseService {
           .catch(err => {
               reject(err.error || 'Server error');
           });
-
-    })
+    });
     return promise;
   }
 

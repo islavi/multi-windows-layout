@@ -1,8 +1,14 @@
-import { GoldenLayoutConfiguration } from '../core';
-import { TestPanelComponent } from './test-panel.component';
+import { GoldenLayoutConfiguration } from '../../core';
+import { TestPanelComponent } from './../test-panel.component';
+import { VesselsMapComponent } from '../components/vessels-map/vessels-map.component';
+import { IsraelComponent } from '../components/israel/israel.component';
 
 export const goldenLayoutConfig: GoldenLayoutConfiguration = {
     components: [
+        {
+            component: VesselsMapComponent,
+            componentName: 'vessels-map'
+        },
         {
             component: TestPanelComponent,
             componentName: 'test-panel'
@@ -14,7 +20,7 @@ export const goldenLayoutConfig: GoldenLayoutConfiguration = {
             content: [{
                 type: 'component',
                 title: 'A',
-                componentName: 'test-panel',
+                componentName: 'vessels-map',
                 componentState: { label: 'A' }
             }, {
                 type: 'column',

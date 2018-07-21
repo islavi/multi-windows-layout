@@ -1,7 +1,7 @@
 
 import { Injectable } from '@angular/core';
-import { Const } from '../const';
-import { User } from '../models/users.model';
+import { Const } from '../../core/const';
+import { User } from '../../core/models/users.model';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { BaseService } from './base.service';
 
@@ -29,7 +29,7 @@ export class UsersService extends BaseService {
               reject(err.error || 'Server error');
           });
 
-    })
+    });
     return promise;
   }
 
@@ -50,7 +50,7 @@ export class UsersService extends BaseService {
               reject(err.error || 'Server error');
           });
 
-    })
+    });
     return promise;
   }
 
@@ -71,8 +71,9 @@ export class UsersService extends BaseService {
               reject(err.error || 'Server error');
           });
 
-    })
+    });
     return promise;
   }
 
 }
+

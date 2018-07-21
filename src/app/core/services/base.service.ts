@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Const } from '../const';
+import { Const } from '../../core/const';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Injectable()
