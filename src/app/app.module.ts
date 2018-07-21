@@ -7,8 +7,10 @@ import { GoldenLayoutModule, GoldenLayoutConfiguration, DEFAULT_LOCAL_STORAGE_ST
 import * as GoldenLayout from 'golden-layout';
 import { goldenLayoutConfig } from './configuration/layout.config';
 import { HttpClientModule } from '@angular/common/http';
-import { VesselsMapsModule } from './components/vessels-map/vessels-map.module';
+import { VesselsMapsModule } from './panels/vessels-map/vessels-map.module';
 import { UIComponentsModule } from './core/ui-components/ui.components.module';
+import { UsersModule } from './panels/users/users.module';
+import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { UIComponentsModule } from './core/ui-components/ui.components.module';
     HttpClientModule,
     GoldenLayoutModule.forRoot(goldenLayoutConfig),
     VesselsMapsModule,
+    UsersModule,
     UIComponentsModule
   ],
   providers: [
-    DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER
+    DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER,
+    { provide: APP_BASE_HREF, useValue: '/' }
   ],
   bootstrap: [AppComponent]
 })

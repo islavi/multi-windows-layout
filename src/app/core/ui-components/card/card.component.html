@@ -17,11 +17,11 @@
         </div>
         <div class="contact-card__header__name">
             <div>
-                <h4>{{operator.firstName}}</h4>
+                <h4>{{user.firstName}}</h4>
                 <br>
-                <h4>{{operator.lastName}}</h4>
+                <h4>{{user.lastName}}</h4>
                 <div class="contact-card__header__tags">
-                    <span class="contact-card__header__tag-family">{{operator.role}}</span>
+                    <span class="contact-card__header__tag-family">{{user.role}}</span>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="contact-card__details">
             <div>
                 <div class="contact-card__details__info">
-                    <span>{{operator.phone}}</span>
+                    <span>{{user.phone}}</span>
                 </div>
                 <div class="contact-card__details__icon">
                     <div>
@@ -42,7 +42,7 @@
             </div>
             <div>
                 <div class="contact-card__details__info">
-                    <span>{{operator.role}}</span>
+                    <span>{{user.role}}</span>
                 </div>
                 <div class="contact-card__details__icon">
                     <div>
@@ -52,7 +52,7 @@
             </div>
             <div>
                 <div class="contact-card__details__info">
-                    <a href="mailto:{{operator.email}}">{{operator.email}}</a>
+                    <a href="mailto:{{user.email}}">{{user.email}}</a>
                 </div>
                 <div class="contact-card__details__icon">
                     <div>
