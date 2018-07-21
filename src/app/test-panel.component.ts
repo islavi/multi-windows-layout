@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core';
-import { GoldenLayoutComponentState, GlOnResize, GlOnHide, GlOnShow, GlOnTab, GoldenLayoutContainer } from '../../core';
+import { GoldenLayoutComponentState, GlOnResize, GlOnHide, GlOnShow, GlOnTab, GoldenLayoutContainer } from '../core';
 import * as GoldenLayout from 'golden-layout';
 
 @Component({
@@ -17,7 +17,7 @@ export class TestPanelComponent implements GlOnResize, GlOnHide, GlOnShow, GlOnT
               @Inject(GoldenLayoutContainer) private container: GoldenLayout.Container) {}
 
   public onInput(e: Event): void {
-    
+
     this.container.extendState({
       value: (<HTMLInputElement>e.target).value
     });

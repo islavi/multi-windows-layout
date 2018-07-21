@@ -14,16 +14,16 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/israel3",
-            "index": "src/main/index.html",
-            "main": "src/main/main.ts",
-            "polyfills": "src/main/polyfills.ts",
-            "tsConfig": "src/main/tsconfig.json",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.json",
             "assets": [
-              "src/main/favicon.ico",
-              "src/main/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "src/main/assets/css/style.scss",
+              "src/assets/css/style.scss",
               "node_modules/golden-layout/src/css/goldenlayout-base.css",
               "node_modules/golden-layout/src/css/goldenlayout-dark-theme.css"
             ],

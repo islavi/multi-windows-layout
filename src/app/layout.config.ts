@@ -1,5 +1,5 @@
-import { GoldenLayoutConfiguration } from "../../core";
-import { TestPanelComponent } from "./test-panel.component";
+import { GoldenLayoutConfiguration } from '../core';
+import { TestPanelComponent } from './test-panel.component';
 
 export const goldenLayoutConfig: GoldenLayoutConfiguration = {
     components: [
