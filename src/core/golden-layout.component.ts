@@ -1,10 +1,10 @@
-import { ComponentFactoryResolver, HostListener, ViewContainerRef, ElementRef, Component, OnInit, Type, Input, NgZone, OpaqueToken, Injector, ReflectiveInjector, ViewChild } from '@angular/core';
+import { ComponentFactoryResolver, HostListener, ViewContainerRef, ElementRef, Component, OnInit, Type, Input, NgZone, InjectionToken, Injector, ReflectiveInjector, ViewChild } from '@angular/core';
 import * as GoldenLayout from 'golden-layout';
 import { GlOnResize, GlOnShow, GlOnHide, GlOnTab } from './hooks';
 import { GoldenLayoutService, ComponentInitCallbackFactory, ComponentInitCallback } from './golden-layout.service';
 
-export const GoldenLayoutContainer = new OpaqueToken('GoldenLayoutContainer');
-export const GoldenLayoutComponentState = new OpaqueToken('GoldenLayoutComponentState');
+export const GoldenLayoutContainer = new InjectionToken('GoldenLayoutContainer');
+export const GoldenLayoutComponentState = new InjectionToken('GoldenLayoutComponentState');
 
 /**
  * Type guard which determines if a component implements the GlOnResize interface.

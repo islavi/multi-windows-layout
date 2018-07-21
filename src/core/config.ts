@@ -1,4 +1,4 @@
-import { OpaqueToken, Type } from '@angular/core';
+import { InjectionToken, Type } from '@angular/core';
 import * as GoldenLayout from 'golden-layout';
 
 export interface ComponentConfiguration {
@@ -25,4 +25,4 @@ export interface GoldenLayoutConfiguration {
   defaultLayout: GoldenLayout.Config;
 }
 
-export const GoldenLayoutConfiguration = new OpaqueToken('GoldenLayoutConfiguration');
+export const GoldenLayoutConfiguration = new InjectionToken('GoldenLayoutConfiguration');
