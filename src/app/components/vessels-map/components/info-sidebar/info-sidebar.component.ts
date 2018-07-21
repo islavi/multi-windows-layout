@@ -1,6 +1,6 @@
 import { Component, OnDestroy} from '@angular/core';
 import { Vessel } from '../../../../core/models/vessel.model';
-import { EventsService } from '../../../../@core/data/events.service';
+import { EventsService } from '../../../../core/data/events.service';
 import { VesselService } from '../../../../core/services/vessel.service';
 
 @Component({

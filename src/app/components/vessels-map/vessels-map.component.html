@@ -11,6 +11,7 @@
             *ngFor="let v of vessels; let i = index"
             [latitude]="v.last_known_position.geometry.coordinates[1]"
             [longitude]="v.last_known_position.geometry.coordinates[0]"
+            [iconUrl]="v.ship_type|vesselIcon: v.individual_classification"
             (markerClick)="showVesselInfo(v.call_sign, v.id)"
             (mouseOver)="showInfoWindow(v.id, infoWindow)"
             (mouseOut)="hideInfoWindow(v.id, infoWindow)"
@@ -22,8 +23,6 @@
     </agm-map>
 
     <div class="draggable-component" appMovable>
-        <!-- <vessel-info></vessel-info> -->
+        <vessel-info></vessel-info>
     </div>
 </div>
-
-<!-- [iconUrl]="v.ship_type|vesselIcon: v.individual_classification" -->

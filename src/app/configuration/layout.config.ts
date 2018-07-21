@@ -1,7 +1,6 @@
 import { GoldenLayoutConfiguration } from '../../core';
 import { TestPanelComponent } from './../test-panel.component';
 import { VesselsMapComponent } from '../components/vessels-map/vessels-map.component';
-import { IsraelComponent } from '../components/israel/israel.component';
 
 export const goldenLayoutConfig: GoldenLayoutConfiguration = {
     components: [

@@ -1,6 +1,6 @@
 import { Component, OnDestroy} from '@angular/core';
 import { Vessel } from '../../../../core/models/vessel.model';
-import { EventsService } from '../../../../@core/data/events.service';
+import { EventsService } from '../../../../core/data/events.service';
 import { VesselService } from '../../../../core/services/vessel.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class VesselInfoComponent implements OnDestroy {
 
   public vessel: Vessel;
 
-  constructor(private vesselService: VesselService,
-              private eventsService: EventsService) {
+  constructor(private eventsService: EventsService,
+              private vesselService: VesselService) {
 
     this.eventsService.MAP_VESSEL_SELECTED_EVENT.subscribe(vesselId => {
       this.getVesselData(vesselId);

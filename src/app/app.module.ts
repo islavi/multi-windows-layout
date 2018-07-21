@@ -8,6 +8,7 @@ import * as GoldenLayout from 'golden-layout';
 import { goldenLayoutConfig } from './configuration/layout.config';
 import { HttpClientModule } from '@angular/common/http';
 import { VesselsMapsModule } from './components/vessels-map/vessels-map.module';
+import { UIComponentsModule } from './core/ui-components/ui.components.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VesselsMapsModule } from './components/vessels-map/vessels-map.module';
     CommonModule,
     HttpClientModule,
     GoldenLayoutModule.forRoot(goldenLayoutConfig),
-    VesselsMapsModule
+    VesselsMapsModule,
+    UIComponentsModule
   ],
   providers: [
     DEFAULT_LOCAL_STORAGE_STATE_STORE_PROVIDER
