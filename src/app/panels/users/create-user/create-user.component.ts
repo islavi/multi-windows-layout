@@ -24,11 +24,11 @@ export class CreateUserComponent {
   }
 
   addUser = () => {
-    this.service.createUser(this.user).then(
-      (user: User) => {
+    this.service.register(this.user)
+    .then((user: User) => {
         this.notificationService.showNotification('success', 'Create user', `User ${this.user.firstName} ${this.user.lastName} was created`);
-      }
-    ).catch((error) => {
+    })
+    .catch((error) => {
       this.notificationService.showNotification('error', 'Create user', `Error creating user ${this.user.firstName} ${this.user.lastName}, please try again later!`);
     });
   }

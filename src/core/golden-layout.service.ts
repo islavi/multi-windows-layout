@@ -7,11 +7,9 @@ import { GoldenLayoutStateStore, StateStore, LocalStorageStateStore } from './st
 /**
  * golden-layout component initialization callback type.
  */
-export interface ComponentInitCallback extends Function {
-  (container: GoldenLayout.Container, componentState: any): void;
-}
+export type ComponentInitCallback = (container: GoldenLayout.Container, componentState: any) => void;
 
-export interface ComponentInitCallbackFactory { 
+export interface ComponentInitCallbackFactory {
   createComponentInitCallback(component: Type<any>): ComponentInitCallback;
 }
 
@@ -37,18 +35,18 @@ export class GoldenLayoutService {
     if (this.stateStore && goldenLayout.isInitialised) {
       try {
         this.stateStore.writeState(goldenLayout.toConfig());
-      } catch(ex) {
+      } catch (ex) {
         // Workaround for https://github.com/deepstreamIO/golden-layout/issues/192
       }
     }
   }
 
-  public getState(): Promise<any>{
+  public getState(): Promise<any> {
     if (this.stateStore) {
       return this.stateStore.loadState().catch(() => {
         return this.config.defaultLayout;
       });
-    } 
+    }
 
     return Promise.resolve(this.config.defaultLayout);
   }

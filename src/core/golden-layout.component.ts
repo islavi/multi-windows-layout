@@ -41,7 +41,7 @@ const COMPONENT_REF_KEY = '$componentRef';
   styles: [`
     .ng-golden-layout-root {
       width:100%;
-      height:100%;
+      height:calc(100% - 100px);
     }`
   ],
   template: `<div class="ng-golden-layout-root" #glroot></div>`
